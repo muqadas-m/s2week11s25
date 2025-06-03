@@ -1,0 +1,21 @@
+name: ci-wf
+on:
+  pull_request:
+    branches:
+      - develop
+    types:
+      - opened
+      - synchronized
+  push:
+    branches:
+      -develop
+jobs:
+  linting-job:
+    runs-on: ubuntu
+    steps:
+      - name: welcome steps
+        run: echo "CI pipeline for this repo"
+      - name: checkout repository
+        uses: action/checkout@v4
+      - name: lint html files
+        run: npx htmlhint            
