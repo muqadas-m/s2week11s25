@@ -1,0 +1,10 @@
+echo "# s2week11s25" 
+git init
+git branch -m develop
+mkdir ./src ./styles ./assets ./bin ./modules
+touch ./.hitignore ./src/index.html ./styles/index.css
+git config --local user.name "muqaddus"
+git config --local user.email "muqaddus@ucp.edu.pk"
+git config --local core.editor notepad
+git remote add origin https://github.com/muqadas-m/s2week11s25.git
+echo "repo complete" 
