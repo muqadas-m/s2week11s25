@@ -18,4 +18,7 @@ jobs:
       - name: checkout repository
         uses: action/checkout@v4
       - name: lint html files
-        run: npx htmlhint "**/*.html"           
+        run: npx htmlhint "**/*.html"   
+      - name: lint css files
+        run: npx stylelint "**/*.css"
+
