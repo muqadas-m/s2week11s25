@@ -5,10 +5,10 @@ on:
       - develop
     types:
       - opened
-      - synchronized
+      - synchronize
   push:
     branches:
-      -develop
+      - develop
 jobs:
   linting-job:
     runs-on: ubuntu
@@ -18,4 +18,4 @@ jobs:
       - name: checkout repository
         uses: action/checkout@v4
       - name: lint html files
-        run: npx htmlhint            
+        run: npx htmlhint "**/*.html"           
